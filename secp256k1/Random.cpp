@@ -26,7 +26,6 @@
 #ifdef __unix__
 #ifdef __CYGWIN__
 #else
-#include <linux/random.h>
 #endif
 #endif
 
