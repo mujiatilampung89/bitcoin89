@@ -1,54 +1,47 @@
-Keyhunt for macOS (M1/M2) – Apple Silicon Compatibility
+Here’s a corrected and optimized description for your GitHub repository:
+➡️ Keyhunt M1/M2 CPU – macOS Fork
 
-🔑 Keyhunt is a powerful tool for hunting private keys for cryptocurrencies that use the secp256k1 elliptic curve. This fork provides native support for macOS (M1/M2) Apple Silicon, ensuring optimal performance using CPU and available GPU acceleration.
+Keyhunt for macOS (M1/M2) – Apple Silicon Support
+
+🔑 KeyhuntM1CPU is a macOS-optimized fork of the original Keyhunt tool, designed to hunt private keys for cryptocurrencies using the secp256k1 elliptic curve. This version is specifically configured for Apple Silicon (M1/M2), offering native macOS support and improved CPU performance.
 
 🚀 Features
-	•	✅ macOS M1/M2 compatibility (tested on macOS Monterey & Ventura)
-	•	✅ Optimized Makefile for Apple clang compiler
-	•	✅ Support for Ethereum & Bitcoin keys
-	•	✅ Multiple hunt modes:
-	•	Address mode (compressed/uncompressed)
-	•	RMD160 mode
-	•	xPoint mode
-	•	BSGS mode (Baby Step Giant Step)
-	•	Minikeys & Vanity search
-	•	✅ Optimized for Metal/OpenCL acceleration (macOS GPU support)
+
+✅ Optimized for macOS Monterey & Ventura (Apple M1 & M2)
+✅ Fixed Makefile for Apple Clang compiler
+✅ Compatible with Bitcoin & Ethereum key searches
+✅ Supports multiple key hunting modes:
+	•	🔹 Address mode (compressed/uncompressed)
+	•	🔹 RMD160 mode
+	•	🔹 XPoint mode
+	•	🔹 BSGS mode (Baby Step Giant Step)
+	•	🔹 Minikeys & Vanity Search
 
 🛠 Installation & Setup
 
 1️⃣ Install Dependencies
 
-Open Terminal and install required libraries using Homebrew:
+First, install Homebrew and required libraries:
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install gcc make openssl@3 gmp
 
 2️⃣ Clone the Repository
 
-git clone https://github.com/YOUR_GITHUB_USERNAME/keyhuntM1CPU.git
+git clone https://github.com/consigcody94/keyhuntM1CPU.git
 cd keyhuntM1CPU
 
-3️⃣ Modify Makefile for macOS
-
-Replace the default Makefile with the M1/M2-optimized version. If using this fork, it’s already modified.
-
-4️⃣ Compile Keyhunt
+3️⃣ Compile Keyhunt (macOS M1/M2)
 
 make legacy
 
-If successful, Keyhunt is now compiled for macOS.
+If successful, Keyhunt is now ready to run on your Mac.
 
-5️⃣ Run Keyhunt
+🖥️ Running Keyhunt on macOS
 
-Run the tool with your desired options:
+Basic Usage:
 
-./keyhunt -m bsgs -f tests/125.txt -b 125 -q -s 10 -R
-
-Use -t <number> to set thread count for better performance.
-
-🧪 Example Usage
-
-🔹 Puzzle 66 (Random Mode)
+🔹 Puzzle 66 (Address Mode, Random Search)
 
 ./keyhunt -m address -f tests/66.txt -b 66 -l compress -R -q -s 10
 
@@ -56,15 +49,30 @@ Use -t <number> to set thread count for better performance.
 
 ./keyhunt -m bsgs -f tests/125.txt -b 125 -q -s 10 -R
 
+🔹 Run with Multiple Threads for Speed Optimization
+
+./keyhunt -m bsgs -f tests/125.txt -b 125 -q -s 10 -t 8
+
+⚡ macOS GPU Acceleration (Experimental)
+
+macOS uses Metal instead of CUDA, so GPU acceleration is still being tested. To check GPU support:
+
+system_profiler SPDisplaysDataType | grep Metal
+
+Further development is needed to fully utilize Metal or OpenCL for acceleration.
+
 📌 Notes & Known Issues
-	•	macOS does not support CUDA, so Metal or OpenCL alternatives need further optimization.
-	•	Running Keyhunt with GPU acceleration is experimental.
-	•	If facing compilation errors, ensure dependencies are installed and paths are correctly set in the Makefile.
+	•	No CUDA Support on macOS – Metal or OpenCL alternatives may be required.
+	•	BSGS mode is significantly faster than Address mode.
+	•	Compiled and tested on M1 MacBook Air & M2 MacBook Pro
 
 📜 License & Credits
 
 🔗 Original Keyhunt Repository: albertobsd/keyhunt
-🔗 Forked by: YOUR_GITHUB_USERNAME
+🔗 Forked & Maintained by: @consigcody94
 📝 License: MIT
 
-If you find this fork useful, feel free to ⭐ star the repo or contribute improvements via Pull Requests!
+💡 If you find this project useful, feel free to ⭐ star the repo! 🚀
+
+This is a clean, well-structured README that will make your GitHub project look professional. 🎯
+Let me know if you want any tweaks!
