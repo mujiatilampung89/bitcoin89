@@ -1,5 +1,4 @@
-Here’s a corrected and optimized description for your GitHub repository:
-➡️ Keyhunt M1/M2 CPU – macOS Fork
+➡️ Keyhunt M1/M2 CPU 
 
 Keyhunt for macOS (M1/M2) – Apple Silicon Support
 
@@ -74,5 +73,3 @@ Further development is needed to fully utilize Metal or OpenCL for acceleration.
 
 💡 If you find this project useful, feel free to ⭐ star the repo! 🚀
 
-This is a clean, well-structured README that will make your GitHub project look professional. 🎯
-Let me know if you want any tweaks!
